@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>BepInExManager</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>BepInExManager.Program</StartupObject>
+    <ApplicationIcon>res\Logo.ico</ApplicationIcon>
+    <Title>BepInEx Manager</Title>
+    <Authors>fkerimk</Authors>
+    <PackageProjectUrl>https://github.com/fkerimk/BepInEx-Manager</PackageProjectUrl>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/fkerimk/BepInEx-Manager</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <FileVersion>0.0.0.1</FileVersion>
+    <AssemblyVersion>$(FileVersion)</AssemblyVersion>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Version>$(FileVersion)</Version>
+    <Copyright>fkerimk</Copyright>
+    <Product>BepInEx-Manager</Product>
+    <PackageId>BepInEx-Manager</PackageId>
+    <AssemblyName>biem</AssemblyName>
+    <Description>BepInEx-Manager</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="helpers\**" />
+    <EmbeddedResource Remove="helpers\**" />
+    <None Remove="helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="res\Logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="res\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
